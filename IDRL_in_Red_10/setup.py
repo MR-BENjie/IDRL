@@ -13,7 +13,7 @@ setuptools.setup(
     description="IDRL implementation in Red-10",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/MR-BENjie/IDRL",
+    url="https://github.com/MR-BENjie/IDRL/tree/main/IDRL_in_Red_10",
     license='Apache License 2.0',
     keywords=["Red-10","Ambiguous identity", "AI", "Reinforcment Learning", "RL", "Torch", "Poker"],
     packages=setuptools.find_packages(),

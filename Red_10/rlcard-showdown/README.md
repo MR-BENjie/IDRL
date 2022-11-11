@@ -1,5 +1,6 @@
-# 演示验证系统
-我们利用RLCard Showdown提供的框架构造我们的红十游戏GUI演示验证系统
+# Evaluation and visualization tool for Red-10 game.
+we use the RLCard Showdown framework to create the GUI support for the Red-10 game. It includes a battle module and 
+a replay module, where you can use the battle module to compare the performance with two algorithms, and analysis the replay using replay module.
 
 ## Installation
 our system separated frontend and backend. The frontend is built with React and the backend is based on Django and Flask.
@@ -37,9 +38,9 @@ pip install -e .
 ### Run 
 1. Launch the backend of leaderboard with
 
-we set the trained weights of relation network and dangerous network in rlcard-master/rlcard/models/pretrained/RD_pretrained
+we set the trained weights of relation network and danger network in Red_10/rlcard/models/pretrained/RD_pretrained
 
-we set the trained four styles weights set of Douzero model in rlcard-master/rlcard/models/pretrained/red_10_pretrained
+we set the trained four patterns weight set of policy model in Red_10/rlcard/models/pretrained/red_10_pretrained
 
 ```
 cd server
