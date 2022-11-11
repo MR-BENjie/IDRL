@@ -26,10 +26,12 @@ To use GPU for training policy module, run
 python3 train.py
 ```
 This will train several policy sets of policy module on one GPU. To train on multiple GPUs. Use the following arguments.
-*   `--gpu_devices`: what gpu devices are visible
-*   `--num_actor_devices`: how many of the GPU deveices will be used for simulation, i.e., self-play
-*   `--num_actors`: how many actor processes will be used for each device
-*   `--training_device`: which device will be used for training DouZero
+```
+`--gpu_devices`: what gpu devices are visible
+`--num_actor_devices`: how many of the GPU deveices will be used for simulation, i.e., self-play
+`--num_actors`: how many actor processes will be used for each device
+`--training_device`: which device will be used for training 
+```
 
 For example, if we have 4 GPUs, where we want to use the first 3 GPUs to have 15 actors each for simulating and the 4th GPU for training, we can run the following command:
 ```
@@ -38,7 +40,7 @@ python3 train.py --gpu_devices 0,1,2,3 --num_actor_devices 3 --num_actors 15 --t
 
 For more customized configuration of training, see the following optional arguments:
 ```
---xpid XPID           Experiment id (default: douzero)
+--xpid XPID           Experiment id
 --save_interval SAVE_INTERVAL
                       Time interval (in minutes) at which to save the model
 --objective {adp,wp}  Use ADP or WP as reward (default: ADP)
@@ -97,21 +99,24 @@ python3 generate_eval_data.py
 Here, we assigned deck for four players.
 
 Some important hyperparameters are list below.
-*   `--output`: pickle file saved path
-*   `--num_games`: number of Red-10 game rounds did. default number: 10000
-
+```
+ `--output`: pickle file saved path
+ `--num_games`: number of Red-10 game rounds did. default number: 10000
+```
 #### step two: self-play
 ```
 python3 evaluate.py
 ```
 Some important hyperparameters are list below.
-*   `--landlord`: agent 0's pre-trained policy parameter path 
-*   `--landlord_up`: agent 3's pre-trained policy parameter path
-*   `--landlord_down`: agent 1's pre-trained policy parameter path
-*   `--landlord_front`: agent 2's pre-trained policy parameter path
-*   `--eval_data`: the pickle file contains evaluation data
-*   `--num_workers`: the number of subprocesses used 
-*   `--gpu_device`: GPU device used. 
+```
+`--landlord`: agent 0's pre-trained policy parameter path 
+`--landlord_up`: agent 3's pre-trained policy parameter path
+`--landlord_down`: agent 1's pre-trained policy parameter path
+`--landlord_front`: agent 2's pre-trained policy parameter path
+`--eval_data`: the pickle file contains evaluation data
+`--num_workers`: the number of subprocesses used 
+`--gpu_device`: GPU device used. 
+```
 
 ### evaluate relation and danger networks in Red_10
 We use the evaluate_red_10.py to evaluate the performance of the relation network and danger network. We use it to visualize the 
