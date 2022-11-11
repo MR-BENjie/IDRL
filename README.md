@@ -43,10 +43,6 @@ For more customized configuration of training, see the following optional argume
 --xpid XPID           Experiment id
 --save_interval SAVE_INTERVAL
                       Time interval (in minutes) at which to save the model
---objective {adp,wp}  Use ADP or WP as reward (default: ADP)
---actor_device_cpu    Use CPU as actor device
---gpu_devices GPU_DEVICES
-                      Which GPUs to be used for training
 --num_actor_devices NUM_ACTOR_DEVICES
                       The number of devices used for simulation
 --num_actors NUM_ACTORS
