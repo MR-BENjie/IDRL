@@ -7,7 +7,7 @@ In the directory "IDRL_in_Red_10", we release the IDRL implementation in the Red
 
 The core concept of the IDRL framework is to transform a setting with ambiguous agent identities into one with less ambiguous identities. That is, agents are empowered to intuitively infer the identity of a cooperating agent and then act upon the assumption. In the IDRL framework, we use the identification module to identify others identities first; then, the policy module, which is pretrained with appropriate action sets, generates operational rule sets. Recall that the identification module comprises a relation network which generates a confidence level vector, and a danger network which generates a risk ratio. The confidence level and risk ratio are then combined to select a corresponding policy in the policy module. Then, the agent acts upon the selected policy.
 
-###installation
+### installation
 The training code is designed for GPUs, thus, you need to first install CUDA.
 
 First, Make sure you have python 3.6+ installed. Install dependencies.
@@ -120,7 +120,8 @@ confidence level and risk ratio transformation in different rounds.
 Before evaluation, the policy parameter file should be placed in specified path noticed above, and the parameter file of ralation
 network and danger network should be organized as 'IDRL_in_Red_10/R_D_checkpoints/relation_weights.ckpt' and 'IDRL_in_Red_10/R_D_checkpoints/dangerous_weights.ckpt' 
 
-##Red-10 environment with evaluation and visualization tool
+## Red-10 environment with evaluation and visualization tool
+
 In Red_10 directory, we provide the code of the Red-10 game environment for reinforcement learning, and evaluation and visualization tool for Red-10 game.
 
 The Red-10 game environment is in the subdirectory "Red_10/rlcard"
@@ -148,6 +149,6 @@ pip3 install -e .
 pip3 install -e .[torch]
 ```
 
-###Evaluation and visualization tool for Red-10 game.
+### Evaluation and visualization tool for Red-10 game.
 We create and release the evaluation and visualization tool for Red-10 game in subdirectory rlcard-showdown, which help 
 understand the performance of the agents. The usage of tool is list in the subdirectory. 
